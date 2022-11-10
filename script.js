@@ -1,9 +1,10 @@
-function isNftKey(key) {
-    // these are the current keys in twitter api responses for those avatars
-    return key === "has_nft_avatar" || key === "ext_has_nft_avatar"
+function isBlueVerifiedKey(key) {
+    // these are the current keys in twitter api responses for blue verified accounts
+    // original checkmarks are in a separate key
+    return key === "is_blue_verified"
 }
 
-// recurse the json tree and set nft keys to false
+// recurse the json tree and set blue verified key to false
 function removeFromTree(tree) {
     if (Array.isArray(tree)) {
         for (const item of tree) {
@@ -12,7 +13,7 @@ function removeFromTree(tree) {
         return;
     } else if (typeof tree === "object") {
         for (const key in tree) {
-            if (isNftKey(key) && tree[key] === true) {
+            if (isBlueVerifiedKey(key) && tree[key] === true) {
                 // no :)
                 tree[key] = false;
                 continue;

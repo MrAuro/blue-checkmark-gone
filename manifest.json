@@ -1,24 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Twitter Hexagons Begone",
-    "short_name": "NFT Hexagon Disabler",
-    "version": "0.0.1",
-    "description": "Changes the hexagon profile avatars on Twitter back to circles.",
-    "icons": {
-        "48": "images/sick-nft_48.png",
-        "128": "images/sick-nft_128.png"
-    },
-    "content_scripts": [{
-        "all_frames": true,
-        "js": ["content-script.js"],
-        "matches": ["*://*.twitter.com/*"],
-        "exclude_globs": ["*://api.twitter.com/*"]
-    }],
-    "web_accessible_resources": [
-        {
-            "resources": ["script.js"],
-            "matches": ["https://*.twitter.com/*"],
-            "extension_ids": ["kgfnlmpfgbbcmnnhpbpfibibnfjhdolk"]
-        }
-    ]
+	"manifest_version": 3,
+	"name": "Blue Checkmark Gone",
+	"short_name": "Hides Twitter Blue Checkmarks",
+	"version": "0.0.1",
+	"description": "Hides the verification checkmark from users who paid for Twitter Blue",
+	"icons": {
+		"48": "images/icon_48.png",
+		"128": "images/icon_128.png"
+	},
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": ["content-script.js"],
+			"matches": ["*://*.twitter.com/*"],
+			"exclude_globs": ["*://api.twitter.com/*"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["script.js"],
+			"matches": ["https://*.twitter.com/*"],
+			"extension_ids": ["kgfnlmpfgbbcmnnhpbpfibibnfjhdolk"]
+		}
+	]
 }

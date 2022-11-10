@@ -1,9 +1,7 @@
-# nft-twitter-block
+# Blue Checkmark Gone
 
-Changes NFT hexagon avatars back to the original circular ones.
+Removes the Twitter Blue checkmark from users who have paid Elon Musk $8 a month
 
-## How it works
+---
 
-It's an extension that intercepts api requests from twitter, and sets the nft keys they use in responses to `false`. Thereby disabling it without having to inject into the React env.
-
-`content-script.js` mounts `script.js` which intercepts XHR requests.
+### This is a fork of [AidenWallis' NFT-Twitter-Block](https://github.com/aidenwallis/nft-twitter-block)
